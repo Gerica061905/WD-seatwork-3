@@ -19,9 +19,14 @@ a.home {
     margin-top: 0.5rem;
     flex-direction: column;
     text-decoration: none;
-    background-color: #000;
+    background-color: #b1d0d6;
     width: 10rem;
-    margin: 0 35rem;
+    margin: 0 33;
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover{
+        transform: translateY(-10px);
+    }
 }
 
 section {
@@ -68,7 +73,6 @@ header {
         color: aliceblue;
         margin-left: -41px;
         text-decoration: none;
-    
 
     & > h4 {
         display: flex;
@@ -93,28 +97,29 @@ img {
 }
 
 .design-one {
-    background-color: #000000;
+    background-color: #550707;
     color: #fff;
     justify-content: space-between;
     padding: 0 1rem;
 }
 
 .design-two {
-    background-color: #000;
+    background-color: #427511;
     color: #fff;
     justify-content: space-between;
     padding: 0 1rem;
 }
 
 .design-three {
-    background-color: #000000;
+    background: linear-gradient(#10bbb3,#10bbb3,#fff1f1,#fff1f1);
+    background-color: #10bbb3;
     color: #fff;
     justify-content: space-between;
     padding: 0 1rem;
 }
 
 .design-four {
-    background: linear-gradient(0deg, rgba(34,74,35,1) 0%, rgba(23,91,25,1) 22%, rgba(24,83,27,1) 25%, rgba(5,79,7,1) 49%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 88%);
+    background: linear-gradient(0deg, rgb(94, 179, 97) 0%, rgba(23,91,25,1) 22%, rgba(24,83,27,1) 25%, rgba(5,79,7,1) 49%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 88%);
     color: #fff;
     justify-content: space-between;
     padding: 0 1rem;
@@ -148,17 +153,37 @@ img {
     height: 7rem;
     margin-left: -1rem;
 }
-
-.design-one .navigation a,
-.design-two .navigation ul li a,
-.design-three .navigation3 a,
-.design-four .navigation4 a,
-.design-five .navigation5 a {
-    color: #fff;
+.design-one .navigation a{
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.design-two .navigation ul li a{
+    color: #a8d8b8;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.design-three .navigation3 a{
+    color: #006560;
     margin: 0 10px;
     text-decoration: none;
 }
-
+.design-four .navigation4 a{
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.design-five .navigation5 a {
+    color: #060000;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .design-two .navigation ul {
     list-style: none;
     display: flex;
@@ -172,135 +197,125 @@ img {
     color: #fff;
     margin: 0 10px;
 }
-
-.animated-header-1 {
-    background-color: #000000;
-    color: #fff;
+/* General Button Styles */
+header button {
     padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
-.animated-header-1:hover {
-    background-color: #2b2b2b;
-}
-
-.animated-header-1 .navigation a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.animated-header-1 .navigation a:hover {
-    color: #ddd;
+/* Design 1: Glow and Grow Effect */
+.design-one .navigation a:hover {
+    color: #ffdf00;
+    text-shadow: 0 0 8px #ffdf00;
     transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
-.animated-header-2 {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+.design-one .right-nav a:hover h4 {
+    color: #ffdf00;
+    text-shadow: 0 0 8px #ffdf00;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
-.animated-header-2:hover {
-    background-color: #3c3c3c;
+/* Design 2: Underline Slide */
+.design-two .navigation ul li a:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
-.animated-header-2 .navigation a {
-    color: #fff;
-    margin: 0 10px;
+.design-two .navigation ul li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #ffffff;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.design-two .navigation ul li a::before {
+    visibility: hidden;
+    transform: scaleX(0);
+}
+
+/* Design 3: Diagonal Slide-In Background */
+.design-three .navigation3 a {
+    position: relative;
+    overflow: hidden;
+}
+/* Simplified Design 3: Underline Reveal */
+.design-three .navigation3 a {
+    position: relative;
+    color: #006560;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.5rem 0;
 }
 
-.animated-header-2 .navigation a:hover {
-    color: #ccc;
-    transform: rotate(5deg);
+.design-three .navigation3 a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #006560;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+.design-three .navigation3 a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-.animated-header-3 {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+/* Design 4: Bubble Effect */
+.design-four .navigation4 a {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.animated-header-3 .navigation3 a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+.design-four .navigation4 a:hover {
+    color: #94fc13;
+    transition: color 0.3s ease-in-out;
 }
 
-.animated-header-3 .navigation3 a:hover {
-    color: #bbb;
-    transform: translateY(-5px);
+.design-four .navigation4 a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s ease-in-out;
 }
 
-.animated-header-4 {
-    background: linear-gradient(0deg, rgba(34,74,35,1) 0%, rgba(23,91,25,1) 22%, rgba(24,83,27,1) 25%, rgba(5,79,7,1) 49%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 88%);
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+.design-four .navigation4 a:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
-
-.animated-header-4:hover {
-    background-color: #5e5e5e;
+/* Design 5: Flip and Color Change */
+.design-five .navigation5 a:hover {
+    color: #ffffff;
+    background-color: #292929;
+    transform: rotateY(180deg);
+    transition: all 0.5s ease-in-out;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
-
-.animated-header-4 .navigation4 a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.animated-header-4 .navigation4 a:hover {
-    color: #aaa;
-    transform: scale(1.2);
-}
-
-.animated-header-5 {
-    background-color: #682222;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-
-.animated-header-5 .navigation5 a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.animated-header-5 .navigation5 a:hover {
-    color: #000000;
-    transform: rotate(-5deg);
-}
-
 .logo-img {
     max-width: 80px;
     height: auto;
@@ -308,5 +323,4 @@ img {
 }
 html{
     background-color: purple;
-    
 }
