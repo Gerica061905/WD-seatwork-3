@@ -1,209 +1,84 @@
+/* General Reset */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-html{
-    background-color: pink;
-
 }
 
-h2 {
-    justify-content: center;
-    align-items: center;
+/* Static Headers */
+.design-one, .design-two, .design-three, .design-four, .design-five {
     display: flex;
-    margin-top: 0.5rem;
-}
-
-a.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.2rem;
-    flex-direction: column;
-    text-decoration: none;
-}
-
-section {
-    display: flex;
-    padding: 0.5rem;
-    max-width: 95%;
-    margin-left: 10px;
-
-    & > p {
-        margin-top: 0.2rem;
-        margin-left: 1rem;
-    }
-}
-
-footer {
-    width: 95%;
-    height: auto;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    color: white;
-    margin: 0.5rem auto;
-    flex-wrap: wrap;
-}
-
-.static-footer-1 img,
-.animated-footer-1 img {
-    max-width: 100%;
-    height: 1.5rem;
-}
-
-.static-footer-2 img,
-.animated-footer-2 img,
-.static-footer-4 img,
-.animated-footer-4 img,
-.static-footer-5 img,
-.animated-footer-5 img {
-    max-width: 100%;
-    height: 4rem;
-}
-
-.static-footer-3 img,
-.animated-footer-3 img {
-    max-width: 100%;
-    height: 5rem;
-}
-
-footer .social-icons i {
-    margin: 0 0.5rem;
-    font-size: 1.5rem;
-}
-
-footer .newsletter {
-    display: flex;
     align-items: center;
+    padding: 1rem;
+    background-color: #661a33;
 }
 
-footer .newsletter input {
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-    border: none;
-    border-radius: 5px;
+.design-one a, .design-two a, .design-three a, .design-four a, .design-five a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-footer .newsletter button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #aa4d00;
-    color: white;
-    cursor: pointer;
+/* Logos */
+.design-one img, .design-two img, .design-three img, .design-four img, .design-five img {
+    height: 60px;
 }
 
-footer .newsletter button:hover {
-    background-color: #2980b9;
+/* Specific header background colors */
+.design-one { background-color: #661a33; }
+.design-two { background-color: #556b2f; }
+.design-three { background-color: #00ffff; }
+.design-four { background-color: #006400; }
+.design-five { background-color: #8b4513; }
+
+/* Animated Headers */
+.animated-header-1, .animated-header-2, .animated-header-3, .animated-header-4, .animated-header-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #661a33;
 }
 
-/* Static Footers */
-footer.static-footer-1 {
-    background-color: #a30606;
-}
-
-footer.static-footer-2 {
-    background-color: #9047FF;
-}
-
-footer.static-footer-3 {
-    background-color: #000;
-}
-
-footer.static-footer-4 {
-    background-color: #ffdfc3;
-    color: black;
-}
-
-footer.static-footer-5 {
-    background-color: #1abc9c;
-}
-
-/* Animated Footers */
-footer.animated-footer-1 {
-    background-color: #a30606;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-footer.animated-footer-1:hover {
-    background-color: #ff6767;
-    transform: scale(1.05);
-}
-
-footer.animated-footer-2 {
-    background-color: #9047FF;
-    transition: background-color 0.3s ease, border-bottom 0.5s ease;
+/* Animations for buttons */
+.animated-header-1 a, .animated-header-2 a, .animated-header-3 a, .animated-header-4 a, .animated-header-5 a {
     position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
 }
 
-footer.animated-footer-2:hover {
-    background-color: #231a27;
+/* Different animations for each header */
+.animated-header-1 a:hover {
+    transform: translateX(10px);
 }
 
-footer.animated-footer-2:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    animation: underline 1s ease forwards;
+.animated-header-2 a:hover {
+    transform: scale(1.1);
 }
 
-@keyframes underline {
-    from {
-        width: 0;
-        height: 20px;
-    }
-    to {
-        width: 100%;
-        height: 5px;
-    }
+.animated-header-3 a:hover {
+    color: #ff6600;
 }
 
-footer.animated-footer-3 {
-    background-color: #000;
-    transition: background-color 0.3s ease;
+.animated-header-4 a:hover {
+    text-shadow: 2px 2px 5px #000;
 }
 
-footer.animated-footer-3:hover {
-    background-color: #2980b9;
+.animated-header-5 a:hover {
+    transform: rotate(10deg);
 }
 
-footer.animated-footer-3 img {
-    transition: transform 1s ease;
+/* Logos */
+.animated-header-1 img, .animated-header-2 img, .animated-header-3 img, .animated-header-4 img, .animated-header-5 img {
+    height: 60px;
 }
 
-footer.animated-footer-3:hover img {
-    transform: rotate(360deg);
-}
-
-footer.animated-footer-4 {
-    background-color: #ffdfc3;
-    color: black;
-    transition: background-color 0.5    s ease;
-}
-
-footer.animated-footer-4:hover {
-    background-color: #d35400;
-    color: white;
-    transition: all 1s ease-in-out;
-  .fab{
-    transform: scale(1.5);
- }
-}
-
-footer.animated-footer-5 {
-    background-color: #1abc9c;
-    transition: background-color 0.3s ease;
-}
-
-footer.animated-footer-5:hover {
-    background-color: #a7ffed;
-    color: #000;
-}
+/* Specific header background colors for animated headers */
+.animated-header-1 { background-color: #661a33; }
+.animated-header-2 { background-color: #556b2f; }
+.animated-header-3 { background-color: #00ffff; }
+.animated-header-4 { background-color: #006400; }
+.animated-header-5 { background-color: #8b4513; }
