@@ -1,11 +1,15 @@
+h2{
+    text-align: center;
+}
 .home {
     display: inline-block;
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 10px 37rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
     background-color: #3498db; /* Blue background */
+    
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -43,25 +47,58 @@ footer {
 .static-footer1 {
     background-color: #333;
     color: #fff;
+display: block;
 }
+
 
 .static-footer2 {
     background-color: #6441A5;
     color: #fff;
+ 
 }
 
 .static-footer3 {
-    background-color: #f3f3f3;
+    background-color:grey;
     color: #333;
+    display: flow-root;
+    & > .logo{
+        /* height: 10rem; */
+        width: 30rem;
+    }
+   
+    .social-icon i{
+      display: inline-block;
+        /* outline: 1px solid; */
+padding: 1.5rem;
+gap: 1rem;  
+margin: .5rem ;
+position: relative;
+right: 2rem;
+border-radius: 30%;
+border: 1px solid orange;         
+}
+
 }
 
 .static-footer4 {
-    background-color: #ff5722;
-    color: #fff;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
+/* .static-footer5 {
+    background-color: #282828;
+    color: #fff;
+    & > .newsletter{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+    & > .btn{
+        position: absolute;
+        left: 49.1rem;
+        top: 84.3rem;
+    }
+    }
+} */
 .static-footer5 {
     background-color: #282828;
     color: #fff;
@@ -152,10 +189,11 @@ footer .social-icons {
 }
 
 footer .social-icons i {
-    color: #fff;
+    color: #ffffff;
     margin: 0 10px;
     font-size: 1.5rem;
     transition: color 0.3s ease;
+    
 }
 
 footer .social-icons i:hover {
