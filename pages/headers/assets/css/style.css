@@ -4,6 +4,25 @@
     margin-left: 1rem;
     box-sizing: border-box;
 }
+a.home {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 18px;
+    width: 10rem;
+    margin: 0.5rem auto;
+    color: #fff;
+    padding: rem;
+    transform: translateY(-5px);
+    &:hover{
+        color: rgb(200, 144, 200);
+        background-color: rgb(82, 19, 82);
+    }
+}
 .mtg{
     position: relative;
     left: 5rem;
@@ -16,19 +35,6 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-
-a.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.5rem;
-    flex-direction: column;
-    text-decoration: none;
-    background-color: #000;
-    width: 10rem;
-    margin: 0 35rem;
-}
-
 section {
     display: flex;
     padding: 0.5rem;
@@ -131,7 +137,6 @@ img {
     color: #fff;
     justify-content: space-between;
     padding: 0 1rem;
-    
 }
 .design-three-animated-header-3 {
     background: linear-gradient(#10bbb3,#10bbb3,#fff1f1,#fff1f1);
@@ -160,8 +165,6 @@ img {
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
-
-    
 }
 .design-five-animated-header-5 {
     background-color: #682222;
